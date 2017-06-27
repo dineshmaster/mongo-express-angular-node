@@ -1,8 +1,6 @@
 var mongoose = require('../models/mongo')
-var personSchema = mongoose.Schema({
-  name: {
-    type: String,
-    require: true
-  }
-})
+var Schema = mongoose.Schema;
+var personSchema = new Schema({
+  name:String
+},{collection:'person'})
 module.exports = mongoose.model('Person', personSchema)

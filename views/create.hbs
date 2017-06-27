@@ -1,0 +1,15 @@
+<form action="/create" method="POST">
+{{#each values}}
+{{this}}
+{{/each}}
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" id="name" name="name" /></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align:right"><button type="submit">Submit</button></td>
+        </tr>
+    </table>
+</form>
