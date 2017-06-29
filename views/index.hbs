@@ -1,8 +1,21 @@
 <a href="/create">Create</a>
 <div>
-    <ul>
-        {{ #each values }}
-        <li>{{this}}</li>
-        {{/each}}
-    </ul>
+    <table>
+        <thead>
+            <th>Person Name</th>
+            <th>Age</th>
+            <th>Edit</th>
+        </thead>
+        <tbody>
+            {{#each person }}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.age}}</td>
+                <th><a href="/edit/{{this._id}}">Edit</th>
+                <th><a href="/delete/{{this._id}}">Delete</th>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
 </div>
